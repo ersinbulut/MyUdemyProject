@@ -49,7 +49,11 @@ namespace HotelProject.WebApi
 			services.AddScoped<IAboutDal, EfAboutDal>();
 			services.AddScoped<IAboutService, AboutManager>();
 
-			services.AddAutoMapper(typeof(Startup));
+
+            services.AddScoped<IBookingDal, EfBookingDal>();
+            services.AddScoped<IBookingService, BookingManager>();
+
+            services.AddAutoMapper(typeof(Startup));
 
             //services.AddScoped
 
