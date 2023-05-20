@@ -26,7 +26,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelProject.WebUI", "Front
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RapidApi", "RapidApi", "{5F938F2C-7DF5-4795-B2D6-776DC3EC19ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidApiConsume", "RapidApi\RapidApiConsume\RapidApiConsume.csproj", "{08965CC8-FD32-41FC-8A4E-27A795C2EA86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RapidApiConsume", "RapidApi\RapidApiConsume\RapidApiConsume.csproj", "{08965CC8-FD32-41FC-8A4E-27A795C2EA86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JwtProject", "JwtProject", "{6BF944A8-3E4D-4180-81C1-CC8D71788C0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiJwt", "JwtProject\WebApiJwt\WebApiJwt.csproj", "{110EE0D6-C1C9-4018-9D91-94DD189E8812}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +66,10 @@ Global
 		{08965CC8-FD32-41FC-8A4E-27A795C2EA86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08965CC8-FD32-41FC-8A4E-27A795C2EA86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08965CC8-FD32-41FC-8A4E-27A795C2EA86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{110EE0D6-C1C9-4018-9D91-94DD189E8812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{110EE0D6-C1C9-4018-9D91-94DD189E8812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{110EE0D6-C1C9-4018-9D91-94DD189E8812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{110EE0D6-C1C9-4018-9D91-94DD189E8812}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +82,7 @@ Global
 		{B013A93E-C30B-4EE2-A8AE-DE3B33FBD4AA} = {857061F3-2204-45DD-8DEE-E135F6D5A9C2}
 		{FD8399BA-9EBA-49BA-9737-5AA4C4651623} = {9D224092-6677-4C3A-A59A-381EDC1CF55C}
 		{08965CC8-FD32-41FC-8A4E-27A795C2EA86} = {5F938F2C-7DF5-4795-B2D6-776DC3EC19ED}
+		{110EE0D6-C1C9-4018-9D91-94DD189E8812} = {6BF944A8-3E4D-4180-81C1-CC8D71788C0E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3EA4E1C4-3A74-4BC6-9D88-0CD0C524956E}
