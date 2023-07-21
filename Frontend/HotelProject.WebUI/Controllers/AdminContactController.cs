@@ -3,6 +3,7 @@ using HotelProject.WebUI.Dtos.SendMessageDto;
 using HotelProject.WebUI.Models.Staff;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -32,6 +33,19 @@ namespace HotelProject.WebUI.Controllers
 			return View();
 		}
 
+		public async Task<IActionResult> Sendbox()
+		{
+			var client = _httpClientFactory.CreateClient();
+			var resonseMessage = await client.GetAsync("http://localhost:61639/api/SendMessage");
+			if (resonseMessage.IsSuccessStatusCode)
+			{
+				var jsonData = await resonseMessage.Content.ReadAsStringAsync();
+				var values = JsonConvert.DeserializeObject<List<ResultSendboxDto>>(jsonData);
+				return View(values);
+			}
+			return View();
+		}
+
 		[HttpGet]
 		public IActionResult AddSendMessage()
 		{
@@ -40,6 +54,9 @@ namespace HotelProject.WebUI.Controllers
 		[HttpPost]
 		public async Task<IActionResult> AddSendMessage(CreateSendMessage createSendMessage)
 		{
+			createSendMessage.SenderMail = "admin@gmail.com";
+			createSendMessage.SenderName = "admin";
+			createSendMessage.Date =DateTime.Parse(DateTime.Now.ToShortDateString());
 			var client = _httpClientFactory.CreateClient();
 			var jsonData = JsonConvert.SerializeObject(createSendMessage);
 			StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");

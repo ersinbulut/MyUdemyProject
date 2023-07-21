@@ -7,16 +7,14 @@ namespace HotelProject.WebApi.Controller
 {
 	[Route("api/[controller]")]
 	[ApiController]
-	public class SenMessageController : ControllerBase
+	public class SendMessageController : ControllerBase
 	{
-
 		private readonly ISendMessageService _sendMessageService;
 
-		public SenMessageController(ISendMessageService sendMessageService)
+		public SendMessageController(ISendMessageService sendMessageService)
 		{
 			_sendMessageService = sendMessageService;
 		}
-
 		[HttpGet]
 		public IActionResult SendMessageList()
 		{

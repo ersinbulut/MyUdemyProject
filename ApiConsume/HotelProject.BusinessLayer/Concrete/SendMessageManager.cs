@@ -12,6 +12,12 @@ namespace HotelProject.BusinessLayer.Concrete
 	public class SendMessageManager : ISendMessageService
 	{
 		private readonly ISendMessageDal _sendMessageDal;
+
+		public SendMessageManager(ISendMessageDal sendMessageDal)
+		{
+			_sendMessageDal = sendMessageDal;
+		}
+
 		public void TDelete(SendMessage t)
 		{
 			_sendMessageDal.Delete(t);
