@@ -13,7 +13,7 @@ namespace HotelProject.DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=BULUTS;initial catalog=ApiDb;integrated security=true");
+            optionsBuilder.UseSqlServer("server=DESKTOP-R3EL3KI;initial catalog=ApiDb;integrated security=true");
         }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Service> Services { get; set; }
