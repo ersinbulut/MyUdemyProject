@@ -29,5 +29,6 @@ namespace HotelProject.WebApi.Controller
             return Ok(values);
 
         }
+
     }
 }
